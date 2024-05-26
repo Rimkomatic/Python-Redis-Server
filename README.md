@@ -1,8 +1,8 @@
-
-# Python Redis Server
+# Redis Clone
 
 This is a simple implementation of a Redis clone written in Python.
 It is not meant to be a fully-featured Redis server, but rather a demonstration of how the Redis protocol works.
+I developed it following the challenge on the wonderful website [CodeCrafters](https://codecrafters.io/).
 
 ## Features
 
@@ -40,26 +40,3 @@ This Redis clone has several limitations compared to a real Redis server:
 - Only a limited set of commands are implemented.
 - The database is not persisted to disk, so all data is lost when the server is stopped.
 - There is no support for multiple databases or authentication.
-
-## Common Bug
-
-When running your server locally, you might see an error like this:
-
-```
-Traceback (most recent call last):
-  File "/.../python3.7/runpy.py", line 193, in _run_module_as_main
-    "__main__", mod_spec)
-  File "/.../python3.7/runpy.py", line 85, in _run_code
-    exec(code, run_globals)
-  File "/app/app/main.py", line 11, in <module>
-    main()
-  File "/app/app/main.py", line 6, in main
-    s = socket.create_server(("localhost", 6379), reuse_port=True)
-AttributeError: module 'socket' has no attribute 'create_server'
-```
-
-This is because `socket.create_server` was introduced in Python 3.8, and you
-might be running an older version.
-
-You can fix this by installing Python 3.8 locally and using that.
-
