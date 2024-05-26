@@ -1,4 +1,4 @@
-# Redis Clone
+# Python Redis
 
 This is a simple implementation of a Redis clone written in Python.
 It is not meant to be a fully-featured Redis server, but rather a demonstration of how the Redis protocol works.
